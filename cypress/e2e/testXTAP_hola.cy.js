@@ -31,7 +31,7 @@ describe('Visitar xtap y verificar title', () => {
         cy.get(':nth-child(1) > .flex-1 > ul > :nth-child(16) > a > .hover\:bg-\[rgba\(255\,255\,255\,0\.05\)\]').should('exist')
         cy.get(':nth-child(1) > .flex-1 > ul > :nth-child(18) > a > .hover\:bg-\[rgba\(255\,255\,255\,0\.05\)\]').should('exist')
         cy.get(':nth-child(1) > .flex-1 > ul > :nth-child(18) > a > .hover\:bg-\[rgba\(255\,255\,255\,0\.05\)\]').should('exist')
-        
+        ca
         cy.get(':nth-child(1) > .flex-1 > ul > :nth-child(18) > a > .hover\:bg-\[rgba\(255\,255\,255\,0\.05\)\]').should('exist')*/
         cy.xpath("//a").should('have.length', '11')
 
