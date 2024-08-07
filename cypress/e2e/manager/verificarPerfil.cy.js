@@ -1,12 +1,12 @@
-describe('Login, navegar a Perfil y verificar el nombre en la tabla', () => {
+describe('Login, navegar a Perfil y verificar Perfil', () => {
     // Reemplaza con la URL de login de tu aplicación
     const loginUrl = 'https://portal-dev.x-tap.club/login';
     const url = 'https://portal-dev.x-tap.club/dashboard';
     const nombreEsperado = 'AdminTest';
     const apellidoEsperado = 'Ivan';
-    const emailEsperado = 'ivan.c@alphaxperience.io';
+    const emailEsperado = 'ivantestonday@gmail.com';
     const telefonoEsperado = '652681716';
-    const usuario = 'ivan.c@alphaxperience.io';
+    const usuario = 'ivantestonday@gmail.com';
     const contraseña = 'xtap123';
 
     before(() => {

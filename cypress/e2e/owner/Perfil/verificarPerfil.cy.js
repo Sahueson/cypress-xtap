@@ -1,12 +1,14 @@
-describe('Login, navegar a Perfil y verificar el nombre en la tabla', () => {
+describe('Login, navegar a Perfil y verificar perfil', () => {
     // Reemplaza con la URL de login de tu aplicación
     const loginUrl = 'https://portal-dev.x-tap.club/login';
     const url = 'https://portal-dev.x-tap.club/dashboard';
-    const nombreEsperado = 'AdminTest';
+    const nombreEmpresaEsperada = 'Owner Test Comp';
+    const direccionEsperada = 'C. Gloria Fuertes, 27, 45223 Seseña, Toledo, Spain';
+    const nombreEsperado = 'OwnerTest';
     const apellidoEsperado = 'Ivan';
-    const emailEsperado = 'ivan.c@alphaxperience.io';
-    const telefonoEsperado = '652681716';
-    const usuario = 'ivan.c@alphaxperience.io';
+    const emailEsperado = 'antoniocabanillas92@gmail.com';
+    const telefonoEsperado = '+34 652681715';
+    const usuario = 'antoniocabanillas92@gmail.com';
     const contraseña = 'xtap123';
 
     before(() => {
@@ -41,21 +43,30 @@ describe('Login, navegar a Perfil y verificar el nombre en la tabla', () => {
         cy.url().should('include', '/perfil');
 
         // Espera a que los campos de perfil estén visibles
-        cy.get('#input-firstName').should('be.visible');
-        cy.get('#input-lastName').should('be.visible');
-        cy.get('#input-email').should('be.visible');
-        cy.get('#input-phone').should('be.visible');
+        cy.get('.mt-8 > .mt-2 > :nth-child(1) > .flex').should('be.visible');
+        cy.get('.mt-8 > .mt-2 > :nth-child(2) > .flex').should('be.visible');
+        cy.get('.mt-4 > .mt-2 > :nth-child(1) > .flex').should('be.visible');
+        cy.get('.mt-4 > .mt-2 > :nth-child(2) > .flex').should('be.visible');
+        cy.get('.mt-2 > :nth-child(3) > .flex').should('be.visible');
+        cy.get(':nth-child(4) > .flex').should('be.visible');
+
 
         // Verifica el valor del campo Nombre
-        cy.get('#input-firstName').should('have.value', nombreEsperado);
+        cy.get('.mt-8 > .mt-2 > :nth-child(1) > .flex').should('contain.text', nombreEmpresaEsperada);
+
+        // Verifica el valor del campo Nombre
+        cy.get('.mt-8 > .mt-2 > :nth-child(2) > .flex').should('contain.text', direccionEsperada);
+
+        // Verifica el valor del campo Nombre
+        cy.get('.mt-4 > .mt-2 > :nth-child(1) > .flex').should('contain.text', nombreEsperado);
 
         // Verifica el valor del campo Apellido
-        cy.get('#input-lastName').should('have.value', apellidoEsperado);
+        cy.get('.mt-4 > .mt-2 > :nth-child(2) > .flex').should('contain.text', apellidoEsperado);
 
         // Verifica el valor del campo Email
-        cy.get('#input-email').should('have.value', emailEsperado);
+        cy.get('.mt-2 > :nth-child(3) > .flex').should('contain.text', emailEsperado);
 
         // Verifica el valor del campo Teléfono
-        cy.get('#input-phone').should('have.value', telefonoEsperado);
+        cy.get(':nth-child(4) > .flex').should('contain.text', telefonoEsperado);
     });
 });

@@ -1,4 +1,4 @@
-describe('Login, navegar a Perfil y verificar el nombre en la tabla', () => {
+describe('Login, navegar a Perfil y verificar perfil', () => {
     // Reemplaza con la URL de login de tu aplicación
     const loginUrl = 'https://portal-dev.x-tap.club/login';
     const url = 'https://portal-dev.x-tap.club/dashboard';
