@@ -9,7 +9,8 @@
   "author": "Ivan Cabanillas",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^13.13.0"
+    "cypress": "^13.13.0",
+    "cypress-mochawesome-reporter": "^3.8.2"
   },
   "devDependencies": {
     "cypress-wait-until": "^3.0.1",

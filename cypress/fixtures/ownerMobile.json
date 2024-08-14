@@ -1,0 +1,12 @@
+{
+    "loginURL": "https://portal-dev.x-tap.club/login",
+    "viewport": "mobile",
+    "usuario": "antoniocabanillas92@gmail.com",
+    "contraseña": "xtap123",
+    "nombreEmpresaOwnerEsperada": "Owner Test Comp",
+    "direccionOwnerEsperada": "C. Gloria Fuertes, 27, 45223 Seseña, Toledo, Spain",
+    "nombreOwnerEsperado": "OwnerTest",
+    "apellidoOwnerEsperado": "Ivan",
+    "emailOwnerEsperado": "antoniocabanillas92@gmail.com",
+    "telefonoOwnerEsperado": "652681715"
+}

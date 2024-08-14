@@ -1,0 +1,16 @@
+{
+    "loginURL": "https://portal-dev.x-tap.club/login",
+    "usuario": "ivan.c@alphaxperience.io",
+    "contraseña": "xtap123",
+    "viewport": "mobile",
+    "nombreEsperado": "AdminTest",
+    "apellidoEsperado": "Ivan",
+    "emailEsperado": "ivan.c@alphaxperience.io",
+    "telefonoEsperado": "652681716",
+    "nombreEmpresaOwnerEsperada": "Owner Test Comp",
+    "direccionOwnerEsperada": "C. Gloria Fuertes, 27, 45223 Seseña, Toledo, Spain",
+    "nombreOwnerEsperado": "OwnerTest",
+    "apellidoOwnerEsperado": "Ivan",
+    "emailOwnerEsperado": "antoniocabanillas92@gmail.com",
+    "telefonoOwnerEsperado": "652681715"
+}

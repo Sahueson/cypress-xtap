@@ -27,3 +27,13 @@
 /// <refence types"Cypress" />
 
 /// <refence types"cypress-xpath" />
+
+/*Cypress.Commands.add("loginComputer", (email,password,url)=>{
+    cy.viewport(1280, 720);
+    cy.visit(url);
+    cy.get('#input-email').type(email);
+    cy.get('#input-password').type(password);
+    cy.get('button[type="submit"]').click();
+    cy.url().should('include', '/dashboard');
+    cy.get('.min-h-screen > .h-full > .flex-1', { timeout: 10000 }).should('be.visible');
+})*/

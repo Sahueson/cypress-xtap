@@ -1,0 +1,11 @@
+{
+    "loginURL": "https://portal-dev.x-tap.club/login",
+    "viewport": "mobile",
+    "usuario": "ivantestonday@gmail.com",
+    "contraseña": "xtap123",
+    "direccionManagerEsperada": "C. Gloria Fuertes, 27, 45223 Seseña, Toledo, Spain",
+    "nombreManagerEsperado": "AdminTest",
+    "apellidoManagerEsperado": "Ivan",
+    "emailManagerEsperado": "ivantestonday@gmail.com",
+    "telefonoManagerEsperado": "652681716"
+}

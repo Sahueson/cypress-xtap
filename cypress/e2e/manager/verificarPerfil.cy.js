@@ -1,35 +1,16 @@
-describe('Login, navegar a Perfil y verificar Perfil', () => {
-    // Reemplaza con la URL de login de tu aplicación
-    const loginUrl = 'https://portal-dev.x-tap.club/login';
-    const url = 'https://portal-dev.x-tap.club/dashboard';
-    const nombreEsperado = 'AdminTest';
-    const apellidoEsperado = 'Ivan';
-    const emailEsperado = 'ivantestonday@gmail.com';
-    const telefonoEsperado = '652681716';
-    const usuario = 'ivantestonday@gmail.com';
-    const contraseña = 'xtap123';
+import LoginPage from "../../../PageObjects/LoginPage";
+
+describe('Login, navegar a Perfil y verificar perfil', () => {
 
     before(() => {
+        const loginComputer = new LoginPage();
 
-        // Configura el tamaño de la ventana del navegador
-        cy.viewport(1280, 720);
-
-        // Limpia las cookies antes de cada prueba
-        cy.clearCookies();
-
-        // Visita la URL de login
-        cy.visit(loginUrl);
-
-        // Completa los campos de login y envía el formulario
-        cy.get('#input-email').type(usuario);
-        cy.get('#input-password').type(contraseña);
-        cy.get('button[type="submit"]').click();
-
-        // Espera a que la URL cambie al dashboard
-        cy.url().should('include', '/dashboard');
-
-        // Espera a que algún elemento específico del dashboard se cargue
-        cy.get('.min-h-screen > .h-full > .flex-1', { timeout: 10000 }).should('be.visible');
+        before(() => {
+    
+            loginComputer.LoginPage('ownerComputer');
+    
+        });
+    
     });
 
     it('Debería navegar a Perfil y verificar los valores de los campos de perfil', () => {
@@ -46,16 +27,20 @@ describe('Login, navegar a Perfil y verificar Perfil', () => {
         cy.get('#input-email').should('be.visible');
         cy.get('#input-phone').should('be.visible');
 
+
+        cy.fixture('managerComputer').then((data) => {
         // Verifica el valor del campo Nombre
-        cy.get('#input-firstName').should('have.value', nombreEsperado);
+        cy.get('#input-firstName').should('have.value', data.nombreManagerEsperado);
 
         // Verifica el valor del campo Apellido
-        cy.get('#input-lastName').should('have.value', apellidoEsperado);
+        cy.get('#input-lastName').should('have.value', data.apellidoManagerEsperado);
 
         // Verifica el valor del campo Email
-        cy.get('#input-email').should('have.value', emailEsperado);
+        cy.get('#input-email').should('have.value', data.emailManagerEsperado);
 
         // Verifica el valor del campo Teléfono
-        cy.get('#input-phone').should('have.value', telefonoEsperado);
+        cy.get('#input-phone').should('have.value', data.telefonoManagerEsperado);
+
+        })
     });
 });
