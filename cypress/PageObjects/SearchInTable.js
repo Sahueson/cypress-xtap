@@ -54,6 +54,18 @@ class SearchInTable {
             }
         });
     }
+
+    findAndClickActionButton(sectionName, nombre) {
+        this.visitSection(sectionName);
+
+        cy.wait(1500);
+        
+        // Buscar la fila que contiene el nombre
+        cy.get('table tbody tr').contains('td', nombre).parent('tr').within(() => {
+            // Hacer clic en el último elemento de la fila (que debería ser el botón de acción)
+            cy.get('td').last().find('svg').click();
+        });
+    }
 }
 
 export default SearchInTable;
