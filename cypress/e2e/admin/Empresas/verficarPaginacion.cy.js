@@ -21,12 +21,13 @@ describe('Login, navegar a Empresas y verificar que la paginacion funciona', () 
         cy.get('.gap-1 > .bg-xMain').contains('1').should('be.visible'); // Verifica que la página 1 está activa
         cy.get('.gap-1 > :nth-child(4)').contains('2').should('be.visible'); // Verifica que la página 2 está visible
         cy.get('.gap-1 > :nth-child(5)').contains('3').should('be.visible'); // Verifica que la página 3 está visible
+        cy.get('.gap-1 > :nth-child(6)').contains('4').should('be.visible'); // Verifica que la página 4 está visible
     
          // Verifica que haya 10 filas
         cy.get('table tbody tr').should('have.length', 10);
     
         // Verifica y haz clic en el botón de la siguiente página
-        cy.get('.gap-1 > :nth-child(6)').find('svg')
+        cy.get('.gap-1 > :nth-child(7)').find('svg')
           .scrollIntoView()
           .should('be.visible', { timeout: 10000 })
           .and('not.be.disabled')
@@ -48,7 +49,7 @@ describe('Login, navegar a Empresas y verificar que la paginacion funciona', () 
                 const rowsInLastPage = total % 10 || 10;
 
                 // Navegar a la última página usando el botón ">>"
-                cy.get('.gap-1 > :nth-child(7)').find('svg').scrollIntoView().click();
+                cy.get('.gap-1 > :nth-child(8)').find('svg').scrollIntoView().click();
 
                 // Verificar el número de filas en la última página
                 cy.get('table tbody tr').should('have.length', rowsInLastPage);

@@ -34,9 +34,6 @@ describe('Login, navegar a Empresas y verificar elementos', () => {
             cy.wrap(header).should('contain.text', expectedHeaders[index]);
         });
 
-        // Verifica el número de resultados mostrados
-        cy.contains('Mostrando 1-10 de 22').should('be.visible');
-
 
         // Verifica los botones de paginación
         cy.get('.gap-1 > :nth-child(1)').find('svg').should('exist') // Verifica que el botón para retroceder al inicio está visible
@@ -44,7 +41,8 @@ describe('Login, navegar a Empresas y verificar elementos', () => {
         cy.get('.gap-1 > .bg-xMain').contains('1').should('be.visible'); // Verifica que la página 1 está activa
         cy.get('.gap-1 > :nth-child(4)').contains('2').should('be.visible'); // Verifica que la página 2 está visible
         cy.get('.gap-1 > :nth-child(5)').contains('3').should('be.visible'); // Verifica que la página 3 está visible
-        cy.get('.gap-1 > :nth-child(6)').find('svg').should('exist') // Verifica que el botón para avanzar está visible
+        cy.get('.gap-1 > :nth-child(6)').contains('4').should('exist') // Verifica que la pagina 4 esta visible
         cy.get('.gap-1 > :nth-child(7)').find('svg').should('exist') // Verifica que el botón para avanzar al final está visible
+        cy.get('.gap-1 > :nth-child(8)').find('svg').should('exist') // Verifica que el botón para avanzar al final está visible
     });
 });

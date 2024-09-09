@@ -1,0 +1,22 @@
+{
+    "sectionName": "Empresas",
+    "onwerName": "OwnerTest Ivan",
+    "commerceName": "Costa Luz Taberna",
+    "creationDate": "Cliente desde 21/08/24",
+    "commerceId": "4",
+    "originalScore": "4.4",
+    "originalNumberReviews": "487",
+    "currentScore": "4,9",
+    "currentNumberReviews": "7.124",
+    "commerceAddress": "Paseo Caño Guerrero, 23, 21760 Matalascañas, Huelva, Spain",
+    "commerceCategory": "Restaurante",
+    "commerceManager": "Lisandro Bradtke",
+    "commerceEmpoyeeName": "test",
+    "commerceEmpoyeeId": "1",
+    "commerceEmpoyeeReviews": "2",
+    "commerceEmpoyeeEmail": "test22@gmail.com",
+    "commerceEmpoyeePhone": "+34611223344",
+    "commerceEmpoyeeJob": "Test",
+    "commerceEmpoyeeStatus": "Activo",
+    "commerceEmailMarketin": "false"
+}

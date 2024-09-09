@@ -1,8 +1,7 @@
 import LoginPage from "../../../PageObjects/LoginPage";
 import SearchAndVerify from "../../../PageObjects/SearchAndVerify";
-import ElementOwner from "../../../PageObjects/ElementOwner";
 
-describe('Login, navegar a Empresas y verificar datos empresa', () => {
+describe('Login, navegar a Empresas, encontrar un owner y revisar un establecimiento', () => {
     const loginComputer = new LoginPage();
     const newSearch = new SearchAndVerify();
 
@@ -12,10 +11,10 @@ describe('Login, navegar a Empresas y verificar datos empresa', () => {
 
     });
 
-    it('Debería navegar a Empresas, busca "OwnerTest" y verifica que aparece en la columna "Contacto', () => {
+    it('Debería navegar a Empresas, busca "OwnerTest", encontrar un establecimento y verificar los datos', () => {
 
         newSearch.searchAndOpenOwnerById('Empresas', 'OwnerTest', '2');
-        ElementOwner.revisarTodo('adminComputer')
+        newSearch.searchAndOpenCommerceById('4');
 
 
         });

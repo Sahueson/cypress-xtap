@@ -14,9 +14,9 @@ class CreateReview {
         this.cookieAcceptButton = '#cookieConsentModal button:contains("Aceptar Cookies")'; // Selector del botón "Aceptar Cookies"
         
         this.urls = [
-            'https://review-dev.x-tap.club/new-review?productUuid=daf019ac-9ee4-4566-8c25-6d002e98fa84',
-            'https://review-dev.x-tap.club/new-review?productUuid=557ce3dd-f95d-4119-bdb1-e4051cf36160',
-            'https://review-dev.x-tap.club/new-review?productUuid=92582751-314f-46bd-b32e-56c7b4759d37'
+            'https://review-dev.x-tap.club/new-review?productUuid=de0360d3-0f75-4662-bf4b-382d32c8b0ab',
+            'https://review-dev.x-tap.club/new-review?productUuid=fa529281-9700-4c58-a669-3872e245f402',
+            'https://review-dev.x-tap.club/new-review?productUuid=536dc13a-95a7-48f4-8062-127745fac123'
         ];
 
         this.expectedRedirectUrl = 'https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fsearch.google.com%2Flocal%2Fwritereview%3Fplaceid%3DChIJIWGFdKCprI8RJGrvoG-fnYE&ifkv=Ab5oB3p-TmmZrUUcbtjp33lqsCQZGhcSSyT07bnzbCPboLYGjwQV59pCiO8oFdSQTyGKymG75PTa&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1071117238%3A1724754993038013&ddm=0';
